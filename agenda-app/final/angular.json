@@ -12,6 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks": true,
             "outputPath": "dist/mdb-angular-free",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -128,13 +129,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -154,9 +150,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -247,9 +241,7 @@
             "polyfills": "projects/mdb-demo/src/polyfills.ts",
             "tsConfig": "projects/mdb-demo/tsconfig.spec.json",
             "karmaConfig": "projects/mdb-demo/karma.conf.js",
-            "styles": [
-              "projects/mdb-demo/src/styles.css"
-            ],
+            "styles": ["projects/mdb-demo/src/styles.css"],
             "scripts": [],
             "assets": [
               "projects/mdb-demo/src/favicon.ico",
@@ -264,9 +256,7 @@
               "projects/mdb-demo/tsconfig.app.json",
               "projects/mdb-demo/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -291,9 +281,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "projects/mdb-demo-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
